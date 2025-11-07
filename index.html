@@ -19,37 +19,96 @@
     <div class="page-wrapper">
       <!------- Header / Branding ------->
       <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
+        <p class="logo">
+          <img
+            src="/img/loreal-logo.png"
+            alt="L'Oreal Logo"
+          />
+        </p>
       </header>
 
-      <!------- Chat Area ------->
-      <main>
-        <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
-          </div>
+<!-- Gallery Section -->
+<section class="gallery-section">
 
-          <form id="chatForm" class="chat-form">
-            <label for="userInput" class="visually-hidden">Message</label>
-            <input
-              id="userInput"
-              name="userInput"
-              type="text"
-              placeholder="Ask me about products or routines…"
-              autocomplete="off"
-              required
-            />
-            <button type="submit" id="sendBtn">
-              <span class="material-icons">send</span>
-              <span class="visually-hidden">Send</span>
-            </button>
-          </form>
-        </section>
-      </main>
+  <section class="pillars-section">
+  <div class="pillars-text">
+    <h2>Need Help With Our Products?</h2>
+  </div>
+
+  <div class="pillars-slider">
+    <div class="pillar-card">
+      <img src="/img/lorealHair.png" alt="Steward the Climate Transition" />
+      <div class="pillar-overlay">
+        <h3>Hair Care</h3>
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <img src="/img/lorealMakeup.png" alt="Safeguard Nature" />
+      <div class="pillar-overlay">
+        <h3>Makeup</h3>
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <img src="/img/lorealFashion.png" alt="Drive Circularity" />
+      <div class="pillar-overlay">
+        <h3>Fashion</h3>
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <img src="/img/lorealYSL.png" alt="Empower Communities" />
+      <div class="pillar-overlay">
+        <h3>Fragrance</h3>
+      </div>
+    </div>
+  </div>
+</section>
+</section> 
+
+      <!--Info section -->
+      <section class="info-section">
+        <h2>L'Oréal Product Advisor </h2>
+        <p>
+          The product advisor is an AI powered tool designed to assist you with L'Oréal products and
+          routines. Feel free to ask any questions you may have.
+        </p>
+      </section>
+
+
+      <section class="chat">
+        <button id="openChatBtn" class="open-chat-btn">Chat with L'Oréal's AI Advisor</button>
+      </section>
+
+      <!------- Chat Area ------->
+<main id="chatContainer" class="hidden">
+  <section class="chatbox">
+    <div id="chatWindow" class="chat-window">
+      <!-- messages will be appended here via JS -->
+    </div>
+
+    <form id="chatForm" class="chat-form">
+      <label for="userInput" class="visually-hidden">Message</label>
+      <input
+        id="userInput"
+        name="userInput"
+        type="text"
+        placeholder="Ask me about products or routines…"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" id="sendBtn">
+        <span class="material-icons">send</span>
+        <span class="visually-hidden">Send</span>
+      </button>
+    </form>
+  </section>
+</main>
 
       <!------- Footer Links ------->
       <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>&copy; 2025 L'Oréal. All rights reserved.</p>
         <nav>
           <!-- These URLs are placeholders -->
           <a href="#">Privacy Policy</a>

@@ -1,16 +1,25 @@
-/* —— basic reset —— */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body {
+  font-family: 'LOreal Sans', Arial, sans-serif;
 }
+
+
+.logo img {
+  max-width: 140px;
+
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, button,.chat-window {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
 
 /* —— body + fonts —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
+  
+  color: #000000;
   display: flex;
   justify-content: center;
+  background: #ffffff;
 }
 
 .page-wrapper {
@@ -20,8 +29,14 @@ body {
 
 /* header */
 .site-header {
+
   text-align: center;
-  padding-top: 50px;
+  font-size: 8px;
+  padding: 20px 0;
+  width: 100vw;       /* stretch full viewport width */
+  margin-left: calc(-50vw + 50%); /* cancel out centering from wrapper */
+  border-bottom: #848383 solid 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .site-title {
@@ -29,6 +44,165 @@ body {
   font-weight: 500;
   margin-bottom: 10px;
 }
+.info-section {
+ 
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px 0;
+  padding-top:50px;
+
+  width: 100vw;             /* span the full viewport width */
+  position: relative;
+  left: 50%;                /* push out of the centered container */
+  right: 50%;
+  margin-left: -50vw;       /* pull back half viewport width */
+  margin-right: -50vw;      /* same for right */
+  
+  background: #EAE6E1;      /* example background */
+  padding: 8 0px 80px;
+
+}
+.info-section h2 {
+  color: #000000;
+  font-weight: normal;
+  font-size: xxx-large;
+  
+}/* ---- Section Layout ---- */
+.pillars-section {
+  width: 100%; 
+  margin-right: -20vw;
+            /* Full width across the screen */
+  position: relative;
+
+}
+
+.pillars-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex: 0 0 300px;
+}
+
+.pillars-text h2 {
+  padding-left: 20px;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+/* ---- Horizontal Scroll Area ---- */
+.pillars-slider {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  padding-bottom: 10px;
+}
+
+/* For Webkit (Chrome, Safari) */
+.pillars-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.pillars-slider::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+/* ---- Cards ---- */
+.pillar-card {
+  position: relative;
+  flex: 0 0 260px;
+  height: 380px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pillar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Images ---- */
+.pillar-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pillar-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ---- Overlay ---- */
+.pillar-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  padding: 30px 16px 20px;
+  text-align: center;
+}
+
+.pillar-overlay h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .pillars-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pillars-text {
+    margin-bottom: 20px;
+  }
+
+  .pillars-slider {
+    width: 100%;
+  }
+}
+
+
+.hidden {
+  display: none;
+}
+.chat{
+  text-align: center;
+}
+.open-chat-btn {
+  background-color: #EAE6E1;
+  color: #000000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.open-chat-btn:hover {
+  background-color: #000000;
+  color: white;
+}
+
 
 /* chat window */
 .chatbox {
@@ -36,13 +210,13 @@ body {
 }
 
 .chat-window {
-  height: 360px;
-  border: 1px solid #000;
+  height: 200px;
+  border: 1px solid #000000;
   padding: 20px;
   font-size: 18px;
   line-height: 1.5;
   overflow-y: auto;
-  background: #fafafa;
+  background: #EAE6E1;
   white-space: pre-line;
 }
 
@@ -53,11 +227,11 @@ body {
 }
 
 .msg.user {
-  color: #000;
+  color: #000000;
 }
 
 .msg.ai {
-  color: #666666;
+  color:#000000
 }
 
 /* input row */
@@ -70,19 +244,19 @@ body {
 .chat-form input {
   flex: 1;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   font-size: 18px;
 }
 
 .chat-form input:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #000000;
   outline-offset: 2px;
 }
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   border: none;
   padding: 12px;
   width: 48px;
@@ -99,11 +273,12 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #000000;
+  color:#ffffff; 
 }
 
 .chat-form button:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #e3a535;
   outline-offset: 2px;
 }
 
@@ -125,7 +300,7 @@ body {
   margin: 60px 0 40px;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #a19e9c;
 }
 
 .site-footer nav {
@@ -134,10 +309,10 @@ body {
 
 .site-footer a {
   margin: 0 8px;
-  color: #000;
+  color: #a19e9c;
   text-decoration: none;
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #e3a535
 }
