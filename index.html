@@ -81,28 +81,27 @@
         <button id="openChatBtn" class="open-chat-btn">Chat with L'Oréal's AI Advisor</button>
       </section>
 
-      <!------- Chat Area ------->
+<!-- 💬 Chat Container (initially hidden) -->
 <main id="chatContainer" class="hidden">
   <section class="chatbox">
-    <div id="chatWindow" class="chat-window">
-      <!-- messages will be appended here via JS -->
-    </div>
+    <h2>Product Advisor</h2>
+    <div id="chatWindow" class="chat-window"></div>
 
     <form id="chatForm" class="chat-form">
-      <label for="userInput" class="visually-hidden">Message</label>
-      <input
-        id="userInput"
-        name="userInput"
-        type="text"
-        placeholder="Ask me about products or routines…"
-        autocomplete="off"
-        required
-      />
-      <button type="submit" id="sendBtn">
-        <span class="material-icons">send</span>
-        <span class="visually-hidden">Send</span>
-      </button>
-    </form>
+  <label for="userInput" class="visually-hidden">Message</label>
+  <input
+    id="userInput"
+    name="userInput"
+    type="text"
+    placeholder="Ask me about products or routines…"
+    autocomplete="off"
+    required
+  />
+  <button type="submit" id="sendBtn" class="send-btn">
+    <span class="arrow">→</span>
+    <span class="visually-hidden">Send</span>
+  </button>
+</form>
   </section>
 </main>
 
